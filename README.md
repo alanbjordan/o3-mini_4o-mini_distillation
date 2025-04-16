@@ -1,7 +1,3 @@
-Below is a generic README you can use for your repository that includes multiple distillation and fine-tuning projects:
-
----
-
 # Distillation & Fine-Tuning Projects Repository
 
 This repository hosts several projects focused on model distillation and fine-tuning. The projects demonstrate techniques ranging from data extraction and training data generation to the distillation of larger teacher models into more compact, task-specific models. Each project is built around specific use cases, including dealership lead management, IT support, and more.

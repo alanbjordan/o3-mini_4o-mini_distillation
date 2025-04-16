@@ -2,17 +2,6 @@
 
 This repository contains code and configuration files for generating training data from dealership conversation logs and distilling a teacher model (o3-mini) into a fine-tuned, compact 4.1-mini model. The system is built to assist dealerships by providing a conversational AI that can help answer customer inquiries, handle appointment scheduling, and provide vehicle information.
 
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Repository Structure](#repository-structure)
-- [Setup and Requirements](#setup-and-requirements)
-- [Training Data Generation](#training-data-generation)
-- [Fine-Tuning Process](#fine-tuning-process)
-- [Testing the Fine-Tuned Model](#testing-the-fine-tuned-model)
-- [Usage](#usage)
-- [License](#license)
 
 ## Overview
 
@@ -70,8 +59,6 @@ For more detailed context and code examples, refer to the [Dealership_Lead_o3-mi
 
 ## Training Data Generation
 
-The script `distillation.py` includes functions for:
-
 - Parsing conversation logs and ordering them by stage.
 - Randomly selecting a complete conversation stage (except the last stage) to act as the training example.
 - Building a conversation context from previous stages to append to the selected stage's assistant message.
@@ -90,16 +77,11 @@ The fine-tuning process involves two main steps:
 
 2. **Model Distillation:**  
    Using the training data, we distill a more compact 4.1-mini model. This step compresses the original model while maintaining its performance in handling customer support interactions.  
-   
-   The corresponding code snippet shows the transition from data preparation on the OpenAI Dashboard to the model distillation process.
 
-   > *Excerpt:*  
-   > "We now transition to the OpenAI Dashboard, where we create a training dataset from our logs. The dataset includes metadata with the key `test` and the value `A001`. Afterward, we distill a 4.1-mini model."  
-   > citeturn0file0
 
 ## Testing the Fine-Tuned Model
 
-The repository includes a testing script (`test_finetuned.py`) to evaluate the performance of the fine-tuned model. The test conversation history replicates a typical dealership interaction scenario:
+The notebook includes a testing script to evaluate the performance of the fine-tuned model. The test conversation history replicates a typical dealership interaction scenario:
 
 - Initial greetings.
 - Inquiries related to vehicle purchases.

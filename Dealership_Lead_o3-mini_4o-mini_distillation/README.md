@@ -12,8 +12,6 @@ This project demonstrates a complete process, from ingesting conversation logs a
 - Distilling a larger teacher model into a compact 4.1-mini model.
 - Testing the fine-tuned model using sample conversation scenarios.
 
-For more detailed context and code examples, refer to the [Dealership_Lead_o3-mini_4o-mini_distillation.pdf](citeturn0file0).
-
 ## Features
 
 - **Training Data Extraction:** Extracts conversation history stages and formats them into a context string.
